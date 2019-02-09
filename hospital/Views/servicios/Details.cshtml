@@ -1,0 +1,29 @@
+@model hospital.Models.servicios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>servicios</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.Id_servicio)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_servicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_servicio)
+    </dl>
+</div>
+<p>
+            @Html.ActionLink("Edit", "Edit", new {
+ 						Id_servicio = Model.Id_servicio 
+ 						}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+ 

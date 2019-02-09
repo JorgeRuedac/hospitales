@@ -1,0 +1,41 @@
+@model hospital.Models.medico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>medico</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.Cod_medico)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_medico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_medico)
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_nacimien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_nacimien)
+    </dl>
+</div>
+<p>
+            @Html.ActionLink("Edit", "Edit", new {
+ 						Cod_medico = Model.Cod_medico 
+ 						}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+ 

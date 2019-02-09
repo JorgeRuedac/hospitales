@@ -1,0 +1,43 @@
+@model hospital.Models.camas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>camas</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.id_cama)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_cama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_cama)
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_hospitales_servicios)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hospitales_servicios.CodigoRefer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+            @Html.ActionLink("Edit", "Edit", new {
+ 						id_cama = Model.id_cama 
+ 						}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+ 

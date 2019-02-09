@@ -1,0 +1,6 @@
+namespace hospital.Data
+{
+
+}
+
+ 

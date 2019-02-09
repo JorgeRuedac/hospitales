@@ -1,0 +1,45 @@
+@model hospital.Models.hospitales_servicios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>hospitales_servicios</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.ID_hospitales_servicios)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cod_hospital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hospitales.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_servicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.servicios.Nombre_servicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoRefer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoRefer)
+    </dl>
+</div>
+<p>
+            @Html.ActionLink("Edit", "Edit", new {
+ 						ID_hospitales_servicios = Model.ID_hospitales_servicios 
+ 						}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+ 

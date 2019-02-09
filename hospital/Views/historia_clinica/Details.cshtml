@@ -1,0 +1,53 @@
+@model hospital.Models.historia_clinica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>historia_clinica</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.id_historia)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_nacim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_nacim)
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_seguridad_social)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_seguridad_social)
+    </dl>
+</div>
+<p>
+            @Html.ActionLink("Edit", "Edit", new {
+ 						id_historia = Model.id_historia 
+ 						}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+ 
